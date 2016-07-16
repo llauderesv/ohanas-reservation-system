@@ -1,0 +1,417 @@
+1. 	CREATE DATABASE ohana;
+
+2.	USE ohana;
+
+3.	CREATE TABLE admin_info_table (
+	admin_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	last_name VARCHAR(40) NOT NULL,
+	first_name VARCHAR(30) NOT NULL,
+	middle_name VARCHAR(20) NOT NULL DEFAULT 'NONE',
+	gender VARCHAR(6) NOT NULL,
+	cellphone_no BIGINT(12) UNSIGNED NOT NULL,
+	address VARCHAR(100) NOT NULL,
+	email_address VARCHAR(50) NOT NULL,
+	INDEX index_admin_id (admin_id),
+	INDEX index_full_name (last_name,first_name)
+	) ENGINE = INNODB;
+
+	CREATE TABLE user_info_table (
+	user_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	last_name VARCHAR(40) NOT NULL,
+	first_name VARCHAR(30) NOT NULL,
+	middle_name VARCHAR(20) NOT NULL DEFAULT 'NONE',
+	gender VARCHAR(6) NOT NULL,
+	cellphone_no BIGINT(12) UNSIGNED NOT NULL,
+	address VARCHAR(100) NOT NULL,
+	email_address VARCHAR(50) NOT NULL,
+	INDEX index_user_id (user_id),
+	INDEX index_full_name (last_name, first_name)
+	) ENGINE = INNODB;
+
+	CREATE TABLE user_account_table (
+	account_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	user_id INT(10) UNSIGNED NOT NULL,
+	username VARCHAR(40) NOT NULL,
+	pass CHAR(40) NOT NULL,
+	user_type VARCHAR(20) NOT NULL,
+	INDEX index_account_id (account_id),
+	INDEX index_user_id (user_id),
+	FOREIGN KEY (user_id) REFERENCES
+	user_info_table (user_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	) ENGINE = INNODB;
+
+	CREATE VIEW user AS
+	SELECT a.user_id, a.last_name, 
+	a.first_name, a.middle_name,
+	b.user_type, a.gender, a.cellphone_no, 
+	a.address, a.email_address, b.username
+	FROM user_account_table AS b
+	INNER JOIN user_info_table AS a
+	ON a.user_id = b.user_id 
+	ORDER BY a.last_name ASC;
+
+	CREATE VIEW user_table AS
+	SELECT a.user_id, a.last_name,
+	a.first_name, b.user_type,
+	b.username, b.pass FROM 
+	user_account_table AS b
+	INNER JOIN user_info_table AS a
+	ON a.user_id = b.user_id;
+
+	CREATE TABLE customer_history_reservation_table (
+	history_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	customer_id INT(10) UNSIGNED NOT NULL,
+	arrival_date DATE NOT NULL,
+	arrival_time TIME NOT NULL,
+	departure_date DATE NOT NULL,
+	departure_time TIME NOT NULL,
+	no_of_persons INT(10) UNSIGNED NOT NULL,
+	days_of_rent VARCHAR(20) NOT NULL,
+	total_payment DECIMAL(10,2) UNSIGNED NOT NULL,
+	status VARCHAR(20) NOT NULL,
+	reference_no BIGINT(12) UNSIGNED NOT NULL,
+	down_payment DECIMAL(10,2) UNSIGNED NOT NULL,
+	INDEX index_customer_history_reservation_id (history_id),
+	FOREIGN KEY (customer_id) REFERENCES
+	customer_info_table (customer_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	) ENGINE = INNODB;  
+
+10.	CREATE TABLE customer_info_table (
+	customer_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	last_name VARCHAR(40) NOT NULL,
+	first_name VARCHAR(30) NOT NULL,
+	middle_name VARCHAR(20) NOT NULL,
+	gender VARCHAR(6) NOT NULL,
+	cellphone_no BIGINT(12) UNSIGNED NOT NULL,
+	address VARCHAR(100) NOT NULL,
+	email_address VARCHAR(50) NOT NULL,
+	INDEX index_customer_id (customer_id),
+	INDEX index_full_name (last_name, first_name)
+	) ENGINE = INNODB;
+
+11.	CREATE TABLE customer_account_table (
+	account_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	customer_id INT(10) UNSIGNED NOT NULL,
+	username VARCHAR(40) NOT NULL,
+	pass CHAR(40) NOT NULL,
+	INDEX index_account_id (account_id),
+	FOREIGN KEY (customer_id) REFERENCES
+	customer_info_table (customer_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	) ENGINE = INNODB;
+
+
+
+4.	CREATE TABLE admin_account_table (
+	account_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	admin_id INT(10) UNSIGNED NOT NULL,
+	username VARCHAR(40) NOT NULL,
+	pass CHAR(40) NOT NULL,
+	user_type VARCHAR(20) NOT NULL,
+	INDEX index_account_id (account_id),
+	INDEX index_admin_id (admin_id),
+	FOREIGN KEY (admin_id) REFERENCES
+	admin_info_table (admin_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	) ENGINE = INNODB;
+
+5.	CREATE VIEW admin_table AS
+	SELECT a.admin_id, a.last_name,
+	a.first_name, b.user_type,
+	b.username, b.pass FROM 
+	admin_account_table AS b
+	INNER JOIN admin_info_table AS a
+	ON a.admin_id = b.admin_id;
+
+6.	CREATE VIEW admin AS
+	SELECT a.admin_id, a.last_name, 
+	a.first_name, a.middle_name,
+	b.user_type, a.gender, a.cellphone_no, 
+	a.address, a.email_address, b.username
+	FROM admin_account_table AS b
+	INNER JOIN admin_info_table AS a
+	ON a.admin_id = b.admin_id 
+	ORDER BY a.last_name ASC;
+
+7.	CREATE TABLE approved_customer_info_table (
+	approved_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	customer_id INT(10) UNSIGNED NOT NULL,
+	last_name VARCHAR(40) NOT NULL,
+	first_name VARCHAR(30) NOT NULL,
+	middle_name VARCHAR(20) NOT NULL DEFAULT 'None',
+	INDEX index_approved_customer_id (customer_id),
+	INDEX index_approved_customer_fullname (last_name,first_name),
+	FOREIGN KEY (customer_id) REFERENCES
+	customer_info_table (customer_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	) ENGINE = INNODB;
+
+8.	CREATE TABLE approved_customer_reserve_table (
+	reservation_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	approved_id INT(10) UNSIGNED NOT NULL,
+	arrival_date DATE NOT NULL,
+	arrival_time TIME NOT NULL,
+	departure_date DATE NOT NULL,
+	departure_time TIME NOT NULL,
+	no_of_persons INT(10) UNSIGNED NOT NULL,
+	INDEX index_approved_reserve_table (reservation_id),
+	FOREIGN KEY (approved_id) REFERENCES
+	approved_customer_info_table (approved_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	) ENGINE = INNODB;
+
+9.	CREATE TABLE approved_customer_room_paid_table (
+	room_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	reservation_id INT(10) UNSIGNED NOT NULL,
+	no_of_rooms INT(10) UNSIGNED NOT NULL,
+	INDEX index_approved_room_id (room_id),
+	FOREIGN KEY (reservation_id) REFERENCES
+	approved_customer_reserve_table (reservation_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	) ENGINE = INNODB;
+
+10.	CREATE TABLE customer_info_table (
+	customer_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	last_name VARCHAR(40) NOT NULL,
+	first_name VARCHAR(30) NOT NULL,
+	middle_name VARCHAR(20) NOT NULL,
+	gender VARCHAR(6) NOT NULL,
+	cellphone_no BIGINT(12) UNSIGNED NOT NULL,
+	address VARCHAR(100) NOT NULL,
+	email_address VARCHAR(50) NOT NULL,
+	INDEX index_customer_id (customer_id),
+	INDEX index_full_name (last_name,first_name)
+	) ENGINE = INNODB;
+
+11.	CREATE TABLE customer_account_table (
+	account_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	customer_id INT(10) UNSIGNED NOT NULL,
+	username VARCHAR(40) NOT NULL,
+	pass CHAR(40) NOT NULL,
+	INDEX index_customer_id (customer_id),
+	FOREIGN KEY (customer_id) REFERENCES
+	customer_info_table (customer_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	) ENGINE = INNODB;
+
+
+
+12.	CREATE TABLE pending_customer_info_table (
+	pending_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	customer_id INT(10) UNSIGNED NOT NULL,
+	last_name VARCHAR(40) NOT NULL,
+	first_name VARCHAR(30) NOT NULL,
+	middle_name VARCHAR(20) NOT NULL DEFAULT 'None',
+	INDEX index_pending_customer_id (customer_id),
+	INDEX index_pending_customer_fullname (last_name,first_name),
+	FOREIGN KEY (customer_id) REFERENCES
+	customer_info_table (customer_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	) ENGINE = INNODB;
+
+
+
+13.	CREATE TABLE customer_reservation_table (
+	reservation_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	customer_id INT(10) UNSIGNED NOT NULL,
+	arrival_date DATE NOT NULL,
+	arrival_time TIME NOT NULL,
+	departure_date DATE NOT NULL,
+	departure_time TIME NOT NULL,
+	no_of_persons INT(10) UNSIGNED NOT NULL,
+	days_of_rent VARCHAR(20) NOT NULL,
+	total_payment DECIMAL(10,2) UNSIGNED NOT NULL,
+	status VARCHAR(20) NOT NULL,
+	INDEX index_customer_reservation_id (reservation_id),
+	FOREIGN KEY (customer_id) REFERENCES
+	customer_info_table (customer_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	) ENGINE = INNODB;
+
+
+
+	
+
+	CREATE TABLE reserve_dates_table (
+	dates_id INT(10) UNSIGNED NOT NULL,
+	reservation_id INT(10) UNSIGNED NOT NULL,
+	reserved_date DATE NOT NULL,
+	FOREIGN KEY (reservation_id) REFERENCES
+	customer_reservation_table (reservation_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	) ENGINE = INNODB;
+
+14.	CREATE TABLE customer_room_paid_table (
+	room_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	reservation_id INT(10) UNSIGNED NOT NULL,
+	no_of_rooms INT(10) UNSIGNED NOT NULL,
+	INDEX index_customer_room_paid_id (room_id),
+	FOREIGN KEY (reservation_id) REFERENCES
+	customer_reservation_table (reservation_id)
+	ON DELETE CASCADE ON UPDATE CASCADE
+	) ENGINE = INNODB;
+
+15.	CREATE TABLE facilities_package_table (
+	facilities_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	facilities_name VARCHAR(50) NOT NULL,
+	description VARCHAR(500) NOT NULL,
+	capacity BIGINT(5) UNSIGNED NOT NULL,
+	image VARCHAR(100) NOT NULL,
+	INDEX index_facilities_id (facilities_id),
+	INDEX index_facilities_name (facilities_name)
+	) ENGINE = INNODB;
+
+16.	CREATE TABLE paid_room_table (
+	room_id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	room_name VARCHAR(50) NOT NULL,
+	description VARCHAR(500) NOT NULL,
+	capacity BIGINT(5) UNSIGNED NOT NULL,
+	price DECIMAL(6,2) UNSIGNED NOT NULL,
+	room_type VARCHAR(50) NOT NULL,
+	image VARCHAR(100) NOT NULL,
+	INDEX index_room_id (room_id),
+	INDEX index_room_name (name)
+	) ENGINE = INNODB;
+
+17.	CREATE TABLE audit_trail (
+	audit_no INT(10) UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	last_name VARCHAR(40)NOT NULL,
+	first_name VARCHAR(30)NOT NULL,
+	action VARCHAR(20)NOT NULL,
+	action_date DATETIME NOT NULL
+	);
+
+
+INSERT INTO user_info_table VALUES
+(2015001,'Llauderes','Vincent','Calma','Male',09294335205,'Caloocan City','vllauderes@yahoo.com');
+INSERT INTO user_account_table VALUES
+(1001,2015001,'llauderesv',AES_ENCRYPT('llauderesv321','EYBISIDIEEFJFIHAHASDKAJSHDKUIY'),'Administrator');
+
+(2015002,'Llauderes','Vianca','Calma','Female',09123232205,'Caloocan City','vianca@yahoo.com'),
+(2015003,'Llauderes','Vench John','Calma','Male',09103095739,'Caloocan City','veejay@yahoo.com');
+(1002,2015002,'vianca08',SHA1('08965465454'),'book_manager'),
+(1003,2015003,'veejay',SHA1('llauderesv'),'book_manager');
+(pass,'EYBISIDIEEFJFIHAHASDKAJSHDKUIY')
+DELETE FROM admin_info_table WHERE admin_id = 2015004; 
+UPDATE admin_account_table SET pass = AES_ENCRYPT('llauderesv','EYBISIDIEEFJFIHAHASDKAJSHDKUIY') WHERE admin_id = 2015001; 
+SELECT * FROM admin_info_table;
+SELECT * FROM admin_account_table;
+
+INSERT INTO customer_info_table VALUES
+(1,'Gonzales','Nadia','Ernacio','Female',09294335205,'Caloocan City','vllauderes@yahoo.com');
+
+INSERT INTO customer_account_table VALUES
+(1001,1,'nadia31',SHA1('09294335205'));
+
+INSERT INTO pending_customer_info_table VALUES
+(100001,1,'Gonzales','Nadia','Ernacio');
+
+UPDATE customer_info_table SET last_name = 'Canchela', first_name = 'Jaime' WHERE customer_id = 1;
+UPDATE pending_customer_info_table SET last_name = 'Canchela', first_name = 'Jaime' WHERE customer_id = 1;
+
+SELECT * FROM customer_info_table;
+SELECT * FROM customer_account_table;
+SELECT * FROM pending_customer_info_table;
+
+DELETE FROM customer_info_table WHERE customer_id = 1;
+DROP TABLE approved_customer_room_paid_table;
+DROP TABLE approved_customer_reserve_table;
+DROP TABLE approved_customer_info_table;
+
+INSERT INTO pending_customer_info_table VALUES
+(1,'Llauderes','Vincent','Calma');
+INSERT INTO pending_customer_reserve_table VALUES
+(10001,1,NOW(),NOW(), '2015/20/15',NOW());
+
+SELECT * FROM pending_customer_info_table;
+SELECT * FROM pending_customer_reserve_table;
+
+DELETE FROM pending_customer_info_table WHERE customer_id = 1;
+
+SELECT * FROM admin_info_table;
+SELECT * FROM admin_account_table;
+
+SELECT 
+a.last_name, a.first_name, a.middle_name, 
+a.gender, a.cellphone_no, a.address,
+a.email_address, b.username 
+FROM admin_account_table AS b
+INNER JOIN admin_info_table AS a
+ON a.admin_id = b.admin_id;
+
+CREATE VIEW customer_table AS
+SELECT 
+a.last_name, a.first_name, a.middle_name, 
+a.gender, a.cellphone_no, a.address,
+a.email_address, b.username, b.user_type
+FROM admin_account_table AS b
+INNER JOIN admin_info_table AS a
+ON a.admin_id = b.admin_id;
+
+SELECT admin_id, CONCAT(last_name, ' ',middle_name, '.',' ',first_name) AS Name,
+user_type, gender, cellphone_no, address, email_address,username
+FROM admin;
+
+SELECT * FROM admin WHERE Name = 'Llauderes Calma. VIncent';
+
+SELECT admin_id, last_name, first_name FROM admin_table
+WHERE username = 'vncnt9' AND pass = SHA1('09294335205');
+WHERE b.username = 'vncnt9' AND pass = 09294335205
+
+
+DELETE FROM user_info_table WHERE user_id > 2015001;
+
+CREATE VIEW reservation AS
+SELECT a.last_name, a.first_name, a.middle_name, b.reservation_id, b.arrival_date, b.arrival_time, b.departure_date,
+b.departure_time, b.no_of_persons, b.days_of_rent, b.total_payment, b.status,
+b.reference_no, b.down_payment, b.customer_id FROM customer_info_table AS a INNER JOIN customer_reservation_table AS b
+ON a.customer_id = b.customer_id;
+
+
+SELECT a.last_name, a.first_name, a.middle_name, b.arrival_date,
+b.arrival_time, b.departure_date, b.departure_time, b.no_of_persons,
+b.days_of_rent, b.total_payment, b.status, b.reference_no,
+b.down_payment FROM customer_info_table AS a INNER JOIN customer_reservation_table AS b ON a.customer_id = b.customer_id;
+
+
+CREATE VIEW history_reservation AS
+SELECT a.last_name, a.first_name, a.middle_name, b.history_id, b.arrival_date, b.arrival_time, b.departure_date,
+b.departure_time, b.no_of_persons, b.days_of_rent, b.total_payment, b.status,
+b.reference_no, b.down_payment, b.customer_id FROM customer_info_table AS a INNER JOIN customer_history_reservation_table AS b 
+ON a.customer_id = b.customer_id;
+
+
+
+SELECT CONCAT(last_name, ' ',first_name,' ',middle_name) AS 
+Name, reservation_id, arrival_date, arrival_time, departure_date, departure_time, no_of_persons, days_of_rent,
+total_payment, status, reference_no, down_payment, customer_id FROM customer_history_reservation_table
+
+
+SELECT arrival_date,departure_date FROM reservation 
+WHERE arrival_date IN
+(SELECT arrival_date,departure_date FROM reservation 
+WHERE arrival_date AND departure_date BETWEEN 
+'2015-10-15' AND '2015-10-16');
+
+CREATE VIEW customer AS
+SELECT b.customer_id, b.last_name, b.first_name, b.middle_name,
+b.gender, b.cellphone_no, b.address, b.email_address, a.username
+FROM customer_account_table AS a INNER JOIN customer_info_table AS b
+ON b.customer_id = a.customer_id;
+
+
+SELECT SUM(total_payment) AS net_income,
+COUNT(history_id) AS number_of_reseravation
+FROM customer_history_reservation_table
+WHERE arrival_date AND departure_date
+LIKE '%2015%';
+
+
+
+
+
+
+
+

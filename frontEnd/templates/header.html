@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<!--Developed By Vincent Llauderes All rights Reserved 2015-->
+		<!--Include all the important files in the webpage-->
+		<meta charset="utf-8">
+		<title><?php print $pagetitle;?></title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="frontEnd/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+		<link href="frontEnd/css/jquery-ui.min.css" type="text/css" rel="stylesheet">
+		<link href="frontEnd/css/animate.css" type="text/css" rel="stylesheet">
+		<link href="frontEnd/css/font-awesome.css" type="text/css" rel="stylesheet">
+		<link href="frontEnd/css/normalize.css" rel="stylesheet" type="text/css"/>	
+		<link href="frontEnd/css/style.css" type="text/css" rel="stylesheet">
+		<link rel='shortcut icon' type='image/x-icon' href='frontEnd/image/resort.ico' />
+		<script type="text/javascript">
+			var im_i = 0;
+			var im_array = ["   Private Resort", "  Reserve now"];
+			var im_elem;
+
+			function imNext(){
+				im_i++;
+				im_elem.style.opacity = 0;
+				if (im_i > (im_array.length - 1)){
+					im_i = 0;
+				}
+				setTimeout('imSlide()', 1000);
+			}
+			function imSlide(){
+				im_elem.innerHTML = im_array[im_i];
+				im_elem.style.opacity = 1;
+				setTimeout('imNext()', 3000);
+			}
+		</script>
+	</head>
+	<body>
+		<!--Create a navigation in top-->
+		<div class="container">
+			<div class="row">
+			<div class="col-md-12" id="main">
+			<div class="row">
+				<div class="col-md-12" id="navTop">
+					<div class="col-md-8"></div>
+						<?php
+							if (isset($_SESSION['account_id'])) {
+								print '<a class="btn" id="login2" name="log_out" href="index.php?id=1">LOG OUT</a>';
+								if (isset($_GET['id'])) {
+									unset($_SESSION['account_id']);
+									unset($_SESSION['reservation_id']);
+									unset($_SESSION['customer_id']);
+									header('Location: index.php');
+									exit();
+								}
+							} else {
+								print '<a class="btn" id="login2" href="register.php">REGISTER NOW</a>';
+							}
+						?>
+						<a class="btn" id="bookNow" href="note.php">RESERVE NOW</a>
+						<a href="https://www.facebook.com/OHANAprivateresort?fref=ts">
+							<i class="fa fa-facebook-square fa-2x" ></i>
+						</a>
+						<a href="https://www.twitter.com">
+							<i class="fa fa-twitter-square fa-2x"></i>
+						</a>
+						<a href="https://www.google.com">
+							<i class="fa fa-google-plus-square fa-2x"></i>
+						</a>
+					</div>
+			</div>
+			<!--Create a navigation bar and the name of the resort-->
+			<div class="row">
+				<div class="col-md-4" id="resorts">
+					<h1 id="resortName"><span id="one">O</span><span id="two">h</span><span id="three">a</span><span id="four">n</span><span id="five">a</span><span id="six">'s</span><span id="sli">Private Resort</span></h1><br />
+					<script>im_elem = document.getElementById("sli"); imSlide();</script>
+					<img src="frontEnd//image/banner2.png" alt="design" id="design" class="img-responsive">
+					<div id="type"><span id="slogan">A PLACE WHERE HAPPINESS IS OFFERED</span></div>
+				</div>
+					<div class="col-md-8" id="navbar">
+						<div class="navbar navbar-inverse navbar-static-top">
+							<div>
+								<ul class="nav navbar-nav navbar-left" id="navbar-text">
+									<li class="list"><a class="nav-text" href="index.php">HOME<br/><span class="span">welcome</span></a></li>
+									<li class="list"><a class="nav-text" href="gallery.php">GALLERY<br/><span class="span">facilities</span></a></li>
+									<li class="list"><a class="nav-text" href="note.php">ACCOMMODATION<br/><span class="span">reservation</span></a></li>
+									<li class="list"><a class="nav-text" href="about.php">ABOUT US<br/><span class="span">about the resort</span></a></li>
+									<li class="list2"><a class="nav-text2" href="contact.php">CONTACT US<br/><span class="span">for more information</span></a></li>
+								</ul>
+							</div>	
+						</div>
+					</div><br /><br /><br /><br /><br /><br /><br /><br />

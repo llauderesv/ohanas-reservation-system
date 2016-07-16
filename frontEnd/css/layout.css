@@ -1,0 +1,1764 @@
+body {
+    background-color: #B5B5B5;
+    font-family: century Gothic,sans-serif;
+}
+@font-face {
+    font-family: Proxima Nova;
+    src: url(../fonts/ProximaNova-Bold.otf);
+}
+@font-face {
+    font-family: Franchise;
+    src: url(../fonts/Franchise-Bold.ttf);
+}
+@font-face {
+    font-family: bebas neue;
+    src: url(../fonts/BebasNeue.otf);
+}
+#login-form {
+    position: absolute;
+    top: -20px;
+    left: -430px;
+}
+#about {
+    font-family: Proxima Nova;
+    font-weight: 700;
+    color: #027A58;
+}
+.contact {
+    font-family: Proxima Nova;
+    font-weight: 700;
+    color: #027A58;
+}
+#next1 {
+    color: #fff;
+    border-radius: 3px;
+    background-color: #34495e;
+    box-shadow: 2px 3px 0px #7f8c8d;
+    padding-top: 8px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: Proxima Nova;
+}
+#next2 {
+    color: #fff;
+    border-radius: 2px;
+    background-color: #47c9af;
+    box-shadow: 2px 3px 0px #7f8c8d;
+    padding-top: 8px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: Proxima Nova;
+    font-weight: 700;
+}
+#ref_no {
+    box-shadow: rgb(232, 232, 232) 1px 1px,
+    rgb(234, 234, 234) 2px 2px,
+    rgb(236, 236, 236) 3px 3px,
+    rgb(238, 238, 238) 4px 4px,
+    rgb(240, 240, 240) 5px 5px,
+    rgb(242, 242, 242) 6px 6px,
+    rgb(244, 244, 244) 7px 7px,
+    rgb(246, 246, 246) 8px 8px,
+    rgb(248, 248, 248) 9px 9px,
+    rgb(250, 250, 250) 10px 10px,
+    rgb(252, 252, 252) 11px 11px,
+    rgb(255, 255, 255) 12px 12px;
+   background-color: rgb(255, 255, 255);
+
+}
+#reser {
+    width: 500px;
+    overflow-x: scroll; 
+}
+#btnSign {
+    background-color: rgb(0,164,156);
+    font-family: Proxima Nova;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0.5px 3px 0px #669999;
+    padding-top: 8px;
+    font-weight: 600;
+    font-size: 15px;
+}
+.instruc {
+    font-weight: 700;
+}
+#tables {
+    width: 1000px;
+}
+#one {
+    color: #3498db;
+}
+#two {
+    color: #c0392b;
+}
+#three {
+    color: #f1c40f;
+}
+#txtfname {
+    background: url('../image/2.PNG') #fff  no-repeat right;
+    background-size: 30px;
+}
+#txtlname {
+    background: url('../image/2.PNG') #fff  no-repeat right;
+    background-size: 30px;
+}
+#txtmname {
+    background: url('../image/2.PNG') #fff  no-repeat right;
+    background-size: 30px;
+}
+#txtemail {
+    background: url('../image/4.PNG') #fff  no-repeat right;
+    background-size: 30px;
+}
+#txtuname {
+    background: url('../image/5.PNG') #fff  no-repeat right;
+    background-size: 30px;
+}
+#inputPassword {
+    background: url('../image/6.PNG') #fff  no-repeat right;
+    background-size: 35px;
+}
+#inputConfirm {
+    background: url('../image/6.PNG') #fff  no-repeat right;
+    background-size: 35px;
+}
+#inputUser {
+    background: url('../image/user.PNG') #fff  no-repeat right;
+    background-size: 35px;
+    box-shadow: rgb(232, 232, 232) 1px 1px,
+    rgb(233, 233, 233) 2px 2px,
+    rgb(234, 234, 234) 3px 3px,
+    rgb(234, 234, 234) 4px 4px,
+    rgb(235, 235, 235) 5px 5px,
+    rgb(236, 236, 236) 6px 6px,
+    rgb(236, 236, 236) 7px 7px,
+    rgb(237, 237, 237) 8px 8px,
+    rgb(238, 238, 238) 9px 9px,
+    rgb(238, 238, 238) 10px 10px,
+    rgb(239, 239, 239) 11px 11px,
+    rgb(240, 240, 240) 12px 12px,
+    rgb(241, 241, 241) 13px 13px,
+    rgb(241, 241, 241) 14px 14px,
+    rgb(242, 242, 242) 15px 15px,
+    rgb(243, 243, 243) 16px 16px,
+    rgb(243, 243, 243) 17px 17px,
+    rgb(244, 244, 244) 18px 18px,
+    rgb(245, 245, 245) 19px 19px,
+    rgb(245, 245, 245) 20px 20px,
+    rgb(246, 246, 246) 21px 21px,
+    rgb(247, 247, 247) 22px 22px,
+    rgb(248, 248, 248) 23px 23px,
+    rgb(248, 248, 248) 24px 24px,
+    rgb(249, 249, 249) 25px 25px,
+    rgb(250, 250, 250) 26px 26px,
+    rgb(250, 250, 250) 27px 27px,
+    rgb(251, 251, 251) 28px 28px,
+    rgb(252, 252, 252) 29px 29px,
+    rgb(252, 252, 252) 30px 30px,
+    rgb(253, 253, 253) 31px 31px,
+    rgb(254, 254, 254) 32px 32px,
+    rgb(255, 255, 255) 33px 33px;
+}
+#inputPass {
+    background: url('../image/lock2.PNG') #fff  no-repeat right;
+    background-size: 35px;
+    box-shadow: rgb(232, 232, 232) 1px 1px,
+    rgb(233, 233, 233) 2px 2px,
+    rgb(234, 234, 234) 3px 3px,
+    rgb(234, 234, 234) 4px 4px,
+    rgb(235, 235, 235) 5px 5px,
+    rgb(236, 236, 236) 6px 6px,
+    rgb(236, 236, 236) 7px 7px,
+    rgb(237, 237, 237) 8px 8px,
+    rgb(238, 238, 238) 9px 9px,
+    rgb(238, 238, 238) 10px 10px,
+    rgb(239, 239, 239) 11px 11px,
+    rgb(240, 240, 240) 12px 12px,
+    rgb(241, 241, 241) 13px 13px,
+    rgb(241, 241, 241) 14px 14px,
+    rgb(242, 242, 242) 15px 15px,
+    rgb(243, 243, 243) 16px 16px,
+    rgb(243, 243, 243) 17px 17px,
+    rgb(244, 244, 244) 18px 18px,
+    rgb(245, 245, 245) 19px 19px,
+    rgb(245, 245, 245) 20px 20px,
+    rgb(246, 246, 246) 21px 21px,
+    rgb(247, 247, 247) 22px 22px,
+    rgb(248, 248, 248) 23px 23px,
+    rgb(248, 248, 248) 24px 24px,
+    rgb(249, 249, 249) 25px 25px,
+    rgb(250, 250, 250) 26px 26px,
+    rgb(250, 250, 250) 27px 27px,
+    rgb(251, 251, 251) 28px 28px,
+    rgb(252, 252, 252) 29px 29px,
+    rgb(252, 252, 252) 30px 30px,
+    rgb(253, 253, 253) 31px 31px,
+    rgb(254, 254, 254) 32px 32px,
+    rgb(255, 255, 255) 33px 33px;
+}
+#gender {
+    background: url('../image/9.PNG') #fff  no-repeat right;
+    background-size: 40px;
+}
+#cellphone {
+    background: url('../image/8.PNG') #fff  no-repeat right;
+    background-size: 35px;
+}
+#address {
+    background: url('../image/7.PNG') #fff  no-repeat right;
+    background-size: 35px;
+}
+
+.button {
+    box-shadow: 0.5px 3px 0px #669999;
+    background-color: #47c9af;
+    border-radius: 2px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: Proxima Nova;
+    text-transform: uppercase;
+    color: white;
+    padding: 5px;
+}
+#four {
+    color: #3498db;
+}
+#five {
+    color: #27ae60;
+}
+#six {
+    color: #c0392b;
+}
+#gallery {
+    height: 598px;
+    overflow-y: scroll;
+}
+#rooms {
+    height: 398px;
+    overflow-y: scroll;
+}
+#scroll {
+    height: 500px;
+    width: 400px;
+    overflow-y: scroll;
+}
+#div {
+    background-color: #e67e22;
+    box-shadow: 8px 8px 3px #D1D1D1;
+    border: 1px solid #e6e6e6; 
+    color: #FFF;
+    height: 550px;
+}
+#div3 {
+    background-color: #47c9af;
+    box-shadow: 8px 8px 3px #D1D1D1;
+    //border: 1px solid #e6e6e6; 
+    color: #FFF;
+    height: 450px;
+}
+#header-image {
+    height: 10px;
+}
+#myCarousel {
+    box-shadow: 0px 15px 10px #D1D1D1;
+}
+#title {
+    font-family: Proxima Nova;
+    font-weight: 700;
+    color: #027A58;
+}
+.numbers {
+  background-color: black;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  color: white;
+  padding-top: 5px;
+  padding-left: 3px;
+  position: relative;
+  border-radius: 100%;
+  margin-left: 50px;
+  font-family: Proxima Nova;
+  font-weight: 700;
+  font-size: 18px;
+}
+img {
+    -webkit-user-drag:none;
+}
+#step-1 {
+    margin-top: 15px;
+    margin-left: -20px;
+    font-family: Proxima Nova;
+    font-weight: 700;
+    font-size: 13px;
+}
+.panel {
+    margin-top: 8px;
+    border-radius: 0px;
+    background-color: black;
+    color: white;
+}
+.choice {
+    font-weight: 700;
+}
+#panel {
+    background-color: white;
+    color: black;
+}
+#headeras {
+    background-color: black;
+    color: white;
+}
+#main {
+    height: 1030px;
+    background-color: #F2F5F5;
+    box-shadow: 0px 0px 30px #000;
+}
+#navTop {
+    height: 40px;
+    background-color: #00707F;
+    border-bottom: 4px solid #F44647;
+}
+#bookNow {
+    box-shadow: 0.5px 3px 0px #669999;
+    background-color: #47c9af;
+    border-radius: 2px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 12px;
+    float: right;
+    font-family: Proxima Nova;
+    padding: 3px 8px;
+    margin-top: 6px;
+    margin-right: 5px; 
+    margin-left: 5px;   
+}
+#printBtn {
+    box-shadow: 0.5px 3px 0px #669999;
+    background-color: #47c9af;
+    border-radius: 2px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: Proxima Nova;
+    padding: 10px;
+}
+#login2 {
+    box-shadow: 0.5px 3px 0px #669999;
+    background-color: #47c9af;
+    border-radius: 2px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 12px;
+    font-family: Proxima Nova;
+    float: right;
+    padding: 3px 8px;
+    margin-top: 6px;
+    margin-left: 5px;  
+    margin-right: -5px;
+}
+#send {
+    box-shadow: 0.5px 3px 0px #7f8c8d;
+    background-color: #34495e;
+    border-radius: 3px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    font-family: Proxima Nova;
+}
+#bookNow:hover {
+    background-color: #ffffff;
+    color: #000000;
+    -webkit-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+#login2:hover {
+    background-color: #ffffff;
+    color: #000000;
+    -webkit-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+.fa {
+    margin-right: 5px;
+    color: white;
+    margin-top: 3px;
+    margin-left: 3px;
+    float: right;
+}
+#phone {
+   color: black;
+   float: left;
+}
+#resortName {
+    font-family: Franchise;
+    font-size: 40px;
+    padding-left: 23px;
+    //padding-bottom: 5px;
+    width: 320px;
+    color: #00707F;
+    text-shadow: rgb(218, 221, 221) 1px 1px,
+    rgb(219, 222, 222) 2px 2px,
+    rgb(220, 223, 223) 3px 3px,
+    rgb(221, 224, 224) 4px 4px,
+    rgb(222, 225, 225) 5px 5px,
+    rgb(223, 226, 226) 6px 6px,
+    rgb(224, 227, 227) 7px 7px,
+    rgb(225, 228, 228) 8px 8px,
+    rgb(226, 229, 229) 9px 9px,
+    rgb(227, 230, 230) 10px 10px,
+    rgb(228, 231, 231) 11px 11px,
+    rgb(229, 232, 232) 12px 12px,
+    rgb(230, 233, 233) 13px 13px,
+    rgb(231, 234, 234) 14px 14px,
+    rgb(232, 235, 235) 15px 15px,
+    rgb(233, 236, 236) 16px 16px,
+    rgb(234, 237, 237) 17px 17px,
+    rgb(235, 238, 238) 18px 18px,
+    rgb(236, 239, 239) 19px 19px,
+    rgb(237, 240, 240) 20px 20px,
+    rgb(238, 241, 241) 21px 21px,
+    rgb(239, 242, 242) 22px 22px,
+    rgb(240, 243, 243) 23px 23px,
+    rgb(241, 244, 244) 24px 24px,
+    rgb(242, 245, 245) 25px 25px;
+    background-color: rgb(242, 245, 245);
+}
+#resorts {
+    margin-top: -10px;
+}
+#slogan {
+    //border-top: #e8e8e8 1px solid;
+    //padding-top: 18px;
+    color: #F44647;
+    padding-left: 10px;
+    letter-spacing: 3.3px;
+    font-weight: bold;
+    font-size: 11px;
+}
+#design {
+    width: 328px;
+    margin-top: -50px;
+}
+.navbar {
+    background-color: #F2F5F5;
+    border-bottom: 0px;
+    margin-top: 40px;
+    //margin-left: -20px;
+}
+#reserve {
+    margin-top: -300px;
+    margin-left: -500px;
+}
+.nav-text{
+    font-size: 50px;
+}
+#navbar-text > li {
+    font-weight: 700;
+
+}
+#login_name {
+    font-family: bebas neue;
+    padding: 10px 0px 0px 10px;
+    box-shadow: 0px 10px 10px #D1D1D1;
+    color: white;
+    font-size: 25px;
+    background-color: #000;
+    height: 50px;
+    margin-top: -10px;
+}
+#login_2 {
+   background-color: #FFF;
+    box-shadow: 7px 15px 10px 0px #000;
+}
+#login_btn {
+   background-color: #16a085;
+   color: #fff;
+   border-radius: 0px;
+   padding-top: 8px;
+   font-size: 15px;
+   text-transform: uppercase;
+   font-family: Proxima Nova;box-shadow: rgb(196, 196, 196) 1px 1px,
+    rgb(196, 196, 196) 2px 2px;
+   background-color: rgb(22, 160, 133);
+}
+#invalid {
+    font-size: 15px;
+    font-weight: 600;
+    color: #b83e22;
+}
+#name {
+    box-shadow: rgb(219, 222, 222) 1px 1px,
+    rgb(220, 223, 223) 2px 2px,
+    rgb(221, 224, 224) 3px 3px,
+    rgb(223, 226, 226) 4px 4px,
+    rgb(224, 227, 227) 5px 5px,
+    rgb(225, 228, 228) 6px 6px,
+    rgb(226, 229, 229) 7px 7px,
+    rgb(228, 231, 231) 8px 8px,
+    rgb(229, 232, 232) 9px 9px,
+    rgb(230, 233, 233) 10px 10px,
+    rgb(231, 234, 234) 11px 11px,
+    rgb(233, 236, 236) 12px 12px,
+    rgb(234, 237, 237) 13px 13px,
+    rgb(235, 238, 238) 14px 14px,
+    rgb(236, 239, 239) 15px 15px,
+    rgb(238, 241, 241) 16px 16px,
+    rgb(239, 242, 242) 17px 17px,
+    rgb(240, 243, 243) 18px 18px,
+    rgb(242, 245, 245) 19px 19px;
+   background-color: rgb(255, 255, 255);
+}
+#cp {
+    box-shadow: rgb(219, 222, 222) 1px 1px,
+    rgb(220, 223, 223) 2px 2px,
+    rgb(221, 224, 224) 3px 3px,
+    rgb(223, 226, 226) 4px 4px,
+    rgb(224, 227, 227) 5px 5px,
+    rgb(225, 228, 228) 6px 6px,
+    rgb(226, 229, 229) 7px 7px,
+    rgb(228, 231, 231) 8px 8px,
+    rgb(229, 232, 232) 9px 9px,
+    rgb(230, 233, 233) 10px 10px,
+    rgb(231, 234, 234) 11px 11px,
+    rgb(233, 236, 236) 12px 12px,
+    rgb(234, 237, 237) 13px 13px,
+    rgb(235, 238, 238) 14px 14px,
+    rgb(236, 239, 239) 15px 15px,
+    rgb(238, 241, 241) 16px 16px,
+    rgb(239, 242, 242) 17px 17px,
+    rgb(240, 243, 243) 18px 18px,
+    rgb(242, 245, 245) 19px 19px;
+   background-color: rgb(255, 255, 255);
+}
+#mesg {
+    box-shadow: rgb(219, 222, 222) 1px 1px,
+    rgb(220, 223, 223) 2px 2px,
+    rgb(221, 224, 224) 3px 3px,
+    rgb(223, 226, 226) 4px 4px,
+    rgb(224, 227, 227) 5px 5px,
+    rgb(225, 228, 228) 6px 6px,
+    rgb(226, 229, 229) 7px 7px,
+    rgb(228, 231, 231) 8px 8px,
+    rgb(229, 232, 232) 9px 9px,
+    rgb(230, 233, 233) 10px 10px,
+    rgb(231, 234, 234) 11px 11px,
+    rgb(233, 236, 236) 12px 12px,
+    rgb(234, 237, 237) 13px 13px,
+    rgb(235, 238, 238) 14px 14px,
+    rgb(236, 239, 239) 15px 15px,
+    rgb(238, 241, 241) 16px 16px,
+    rgb(239, 242, 242) 17px 17px,
+    rgb(240, 243, 243) 18px 18px,
+    rgb(242, 245, 245) 19px 19px;
+   background-color: rgb(255, 255, 255);
+}
+#navbar-text > li > .nav-text {
+    color: #027A58;
+    padding-top: 6px;
+    font-size: 35px;
+    padding-bottom: 40px;   
+    font-size: 15px;
+    font-family: Proxima Nova;
+    font-weight: 700;
+    text-shadow: rgb(218, 221, 221) 1px 1px,
+    rgb(219, 222, 222) 2px 2px,
+    rgb(220, 223, 223) 3px 3px,
+    rgb(221, 224, 224) 4px 4px,
+    rgb(222, 225, 225) 5px 5px,
+    rgb(223, 226, 226) 6px 6px,
+    rgb(224, 227, 227) 7px 7px,
+    rgb(225, 228, 228) 8px 8px,
+    rgb(226, 229, 229) 9px 9px,
+    rgb(227, 230, 230) 10px 10px,
+    rgb(228, 231, 231) 11px 11px,
+    rgb(229, 232, 232) 12px 12px,
+    rgb(230, 233, 233) 13px 13px,
+    rgb(231, 234, 234) 14px 14px,
+    rgb(232, 235, 235) 15px 15px,
+    rgb(233, 236, 236) 16px 16px,
+    rgb(234, 237, 237) 17px 17px,
+    rgb(235, 238, 238) 18px 18px,
+    rgb(236, 239, 239) 19px 19px,
+    rgb(237, 240, 240) 20px 20px,
+    rgb(238, 241, 241) 21px 21px,
+    rgb(239, 242, 242) 22px 22px,
+    rgb(240, 243, 243) 23px 23px,
+    rgb(241, 244, 244) 24px 24px,
+    rgb(242, 245, 245) 25px 25px;
+}
+#navbar-text > li > .nav-text2 {
+    color: #027A58;
+    padding-top: 6px;
+    padding-bottom: 40px;
+    font-size: 15px;
+    font-family: Proxima Nova;
+    font-weight: 700;
+    text-shadow: rgb(218, 221, 221) 1px 1px,
+    rgb(219, 222, 222) 2px 2px,
+    rgb(220, 223, 223) 3px 3px,
+    rgb(221, 224, 224) 4px 4px,
+    rgb(222, 225, 225) 5px 5px,
+    rgb(223, 226, 226) 6px 6px,
+    rgb(224, 227, 227) 7px 7px,
+    rgb(225, 228, 228) 8px 8px,
+    rgb(226, 229, 229) 9px 9px,
+    rgb(227, 230, 230) 10px 10px,
+    rgb(228, 231, 231) 11px 11px,
+    rgb(229, 232, 232) 12px 12px,
+    rgb(230, 233, 233) 13px 13px,
+    rgb(231, 234, 234) 14px 14px,
+    rgb(232, 235, 235) 15px 15px,
+    rgb(233, 236, 236) 16px 16px,
+    rgb(234, 237, 237) 17px 17px,
+    rgb(235, 238, 238) 18px 18px,
+    rgb(236, 239, 239) 19px 19px,
+    rgb(237, 240, 240) 20px 20px,
+    rgb(238, 241, 241) 21px 21px,
+    rgb(239, 242, 242) 22px 22px,
+    rgb(240, 243, 243) 23px 23px,
+    rgb(241, 244, 244) 24px 24px,
+    rgb(242, 245, 245) 25px 25px;
+}
+#go:hover {
+    text-decoration: none;
+    color: lightBlue;
+}
+#pageer {
+    font-family: Bebas Neue;
+    font-weight: 700;
+    font-size: 40px;
+}
+#title2 {
+    background-color: #e74c3c;
+    color: #FFF;
+    font-weight: 700;
+    font-family: Proxima Nova;
+    font-size: 13px;
+    padding-left: 15px;
+}
+#title3 {
+    background-color: #FFF;
+    border: 0px solid #d9d9d9;
+    box-shadow: rgb(181, 183, 183) 1px 1px,
+    rgb(184, 186, 186) 2px 2px,
+    rgb(187, 189, 189) 3px 3px,
+    rgb(189, 192, 192) 4px 4px,
+    rgb(192, 194, 194) 5px 5px,
+    rgb(195, 197, 197) 6px 6px,
+    rgb(198, 200, 200) 7px 7px,
+    rgb(200, 203, 203) 8px 8px,
+    rgb(203, 206, 206) 9px 9px,
+    rgb(206, 208, 208) 10px 10px,
+    rgb(209, 211, 211) 11px 11px,
+    rgb(211, 214, 214) 12px 12px,
+    rgb(214, 217, 217) 13px 13px,
+    rgb(217, 219, 219) 14px 14px,
+    rgb(220, 222, 222) 15px 15px,
+    rgb(222, 225, 225) 16px 16px,
+    rgb(225, 228, 228) 17px 17px,
+    rgb(228, 231, 231) 18px 18px,
+    rgb(231, 233, 233) 19px 19px,
+    rgb(233, 236, 236) 20px 20px,
+    rgb(236, 239, 239) 21px 21px,
+    rgb(239, 242, 242) 22px 22px,
+    rgb(242, 245, 245) 23px 23px;
+}
+#title4 {
+    text-shadow: rgb(182, 60, 47) 1px 1px,
+    rgb(187, 62, 48) 2px 2px,
+    rgb(192, 63, 49) 3px 3px,
+    rgb(197, 65, 51) 4px 4px,
+    rgb(202, 66, 52) 5px 5px,
+    rgb(206, 68, 53) 6px 6px,
+    rgb(211, 69, 54) 7px 7px,
+    rgb(216, 71, 56) 8px 8px,
+    rgb(221, 72, 57) 9px 9px,
+    rgb(226, 74, 58) 10px 10px,
+    rgb(231, 76, 60) 11px 11px;
+   background-color: rgb(231, 76, 60);
+}
+.title6 {
+    font-family: Proxima Nova;
+}
+.title5 {
+    font-weight: 700;
+    font-size: 13px;
+    font-family: Proxima Nova;
+    color: #000;
+    text-shadow: rgb(215, 215, 215) 1px 1px,
+    rgb(222, 222, 222) 2px 2px,
+    rgb(228, 228, 228) 3px 3px,
+    rgb(235, 235, 235) 4px 4px,
+    rgb(241, 241, 241) 5px 5px,
+    rgb(248, 248, 248) 6px 6px,
+    rgb(255, 255, 255) 7px 7px;
+   background-color: rgb(255, 255, 255);
+}
+.span {
+    color: grey;
+    margin-top: 10px;
+    font-size: 13px;
+}
+.span2 {
+    color: #b83e22;
+    font-weight: 600;
+}
+.list {
+    margin-top: 10px;
+    border-right: 1px solid #e8e8e8;
+    height: 50px;
+}
+.list2 {
+    margin-top: 10px;
+    height: 30px;
+}
+#navbar-text > li > a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 4px solid #34495e;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+#navbar-text > li > a:hover:before, #navbar-text > li > a:focus:before, #navbar-text > li > a:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+.copyRight {
+    color: white;
+    font-size: 15px;
+    //margin-left: 35px;
+    font-weight: 700;
+}
+#footers {
+    position: absolute;
+    top: 950px;
+    height: 80px;
+    border-top: 4px solid #F44647;
+    background-color: #00707F;
+    //padding-left: 385px;
+    font-family: Proxima Nova;
+}
+#content {
+    text-align: center;
+}
+
+.footer2 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: Proxima Nova;
+}
+.footer2:hover {
+    text-decoration: none;
+    color: #ffffff;
+    -webkit-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+.footer3 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: Proxima Nova;
+}
+.footer3:hover {
+    text-decoration: none;
+    color: #ffffff;
+     -webkit-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+ol {
+    float: right;
+}
+.slash{
+    color: #d7d7d7;
+}
+#ref {
+    font-size: 13px;
+}
+.overview {
+    font-family: Proxima Nova;
+    font-weight: 700;
+    color: #027A58;
+    font-size: 16px;
+    padding-bottom: 7px;
+    border-bottom: 3px solid #34495e;
+   text-shadow: rgb(211, 213, 213) 1px 1px,
+    rgb(216, 218, 218) 2px 2px,
+    rgb(221, 223, 223) 3px 3px,
+    rgb(226, 229, 229) 4px 4px,
+    rgb(231, 234, 234) 5px 5px,
+    rgb(236, 239, 239) 6px 6px,
+    rgb(242, 245, 245) 7px 7px;
+}
+#info {
+    padding-left: 60px;
+}
+#steps {
+    box-shadow: 0px 10px 10px #D1D1D1;
+}
+.carousel-indicators > li {
+    background-color: #e67e22;
+    border: 2px solid #34495e;
+
+}
+#btns {
+    position: absolute;
+    top: 490px;
+    width: 1200px;
+}
+.carousel-indicators > li:active {
+    background-color: #000;
+}
+#info {
+    margin-left: -20px;
+    padding-top: 10px;
+    list-style-type: none;
+    list-style-image: url('../image/check_copy.png');
+}
+.iframe {
+    border: 1px solid black;
+}
+.help-block {
+    margin-top: -5px;
+}
+.form {
+    height: 530px;
+}
+.text {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+}
+#form {
+    height: 530px;
+    overflow-y: scroll;
+}
+#form2 {
+    height: 530px;
+    overflow-y: scroll;
+    //color: #FFF;
+    //background-color: #607D8B;
+}   
+#r_title:after {
+    content: ' ';
+    width: 10px;
+    height: 0px;
+    border-top: 20px solid #e67e22;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid  transparent;
+    position: absolute;
+    left: 150px;
+    top: 48px;
+}
+#r_title {
+    background-color: #e67e22;
+    font-family: Proxima Nova;
+    font-size: 15px;
+    color: #FFF;
+    text-shadow: rgb(183, 100, 27) 1px 1px,
+    rgb(188, 103, 28) 2px 2px,
+    rgb(192, 105, 28) 3px 3px,
+    rgb(197, 108, 29) 4px 4px,
+    rgb(202, 110, 30) 5px 5px,
+    rgb(206, 113, 30) 6px 6px,
+    rgb(211, 115, 31) 7px 7px,
+    rgb(216, 118, 32) 8px 8px,
+    rgb(220, 120, 32) 9px 9px,
+    rgb(225, 123, 33) 10px 10px,
+    rgb(230, 126, 34) 11px 11px;
+   background-color: rgb(230, 126, 34);
+}
+#r_title3:after {
+    content: ' ';
+    width: 10px;
+    height: 0px;
+    border-top: 20px solid #16a085;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid  transparent;
+    position: absolute;
+    left: 150px;
+    top: 48px;
+}
+#r_title3 {
+    background-color: #16a085;
+    font-family: Proxima Nova;
+    font-size: 15px;
+    color: #FFF;
+    text-shadow: rgb(17, 128, 106) 1px 1px,
+    rgb(17, 131, 109) 2px 2px,
+    rgb(18, 134, 111) 3px 3px,
+    rgb(18, 137, 114) 4px 4px,
+    rgb(19, 140, 117) 5px 5px,
+    rgb(19, 144, 119) 6px 6px,
+    rgb(20, 147, 122) 7px 7px,
+    rgb(20, 150, 125) 8px 8px,
+    rgb(21, 153, 127) 9px 9px,
+    rgb(21, 156, 130) 10px 10px,
+    rgb(22, 160, 133) 11px 11px;
+   background-color: rgb(22, 160, 133);
+}
+#r_title2:after {
+    content: ' ';
+    width: 10px;
+    height: 0px;
+    border-top: 20px solid #34495e;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid  transparent;
+    position: absolute;
+    left: 150px;
+    top: 48px;
+}
+#r_title2 {
+    background-color: #34495e;
+    font-family: Proxima Nova;
+    font-size: 15px;
+    color: #FFF;
+    text-shadow: rgb(42, 58, 74) 1px 1px,
+    rgb(43, 59, 76) 2px 2px,
+    rgb(44, 61, 78) 3px 3px,
+    rgb(45, 62, 80) 4px 4px,
+    rgb(46, 64, 82) 5px 5px,
+    rgb(47, 65, 84) 6px 6px,
+    rgb(48, 67, 86) 7px 7px,
+    rgb(49, 68, 88) 8px 8px,
+    rgb(50, 70, 90) 9px 9px,
+    rgb(51, 71, 92) 10px 10px,
+    rgb(52, 73, 94) 11px 11px;
+   background-color: rgb(52, 73, 94);
+}
+#terms {
+    color: lightblue;
+}
+.acc_no {
+    font-weight: 700;
+}
+#details2 {
+    background-color: #e67e22;
+    //border: 1px solid #bdc3c7;
+    box-shadow: 0px 15px 15px 0px #737373;
+    color: white;
+    overflow-y: scroll;
+    height: 420px; 
+    box-shadow: rgb(204, 207, 207) 1px 1px,
+    rgb(206, 209, 209) 2px 2px,
+    rgb(207, 210, 210) 3px 3px,
+    rgb(209, 212, 212) 4px 4px,
+    rgb(210, 213, 213) 5px 5px,
+    rgb(212, 215, 215) 6px 6px,
+    rgb(213, 216, 216) 7px 7px,
+    rgb(215, 218, 218) 8px 8px,
+    rgb(217, 220, 220) 9px 9px,
+    rgb(218, 221, 221) 10px 10px,
+    rgb(220, 223, 223) 11px 11px,
+    rgb(221, 224, 224) 12px 12px,
+    rgb(223, 226, 226) 13px 13px,
+    rgb(224, 227, 227) 14px 14px,
+    rgb(226, 229, 229) 15px 15px,
+    rgb(227, 230, 230) 16px 16px,
+    rgb(229, 232, 232) 17px 17px,
+    rgb(231, 234, 234) 18px 18px,
+    rgb(232, 235, 235) 19px 19px,
+    rgb(234, 237, 237) 20px 20px,
+    rgb(235, 238, 238) 21px 21px,
+    rgb(237, 240, 240) 22px 22px,
+    rgb(238, 241, 241) 23px 23px,
+    rgb(240, 243, 243) 24px 24px,
+    rgb(242, 245, 245) 25px 25px;
+   background-color: rgb(230, 126, 34);
+}
+#headers3 {
+    font-weight: 700;
+    font-family: Proxima Nova;
+    text-transform: uppercase;
+}
+#head {
+    background-color: #00a2d3;
+    color: #FFF;
+    text-shadow: rgb(0, 145, 189) 1px 1px,
+    rgb(0, 147, 191) 2px 2px,
+    rgb(0, 148, 193) 3px 3px,
+    rgb(0, 150, 195) 4px 4px,
+    rgb(0, 151, 197) 5px 5px,
+    rgb(0, 153, 199) 6px 6px,
+    rgb(0, 154, 201) 7px 7px,
+    rgb(0, 156, 203) 8px 8px,
+    rgb(0, 157, 205) 9px 9px,
+    rgb(0, 159, 207) 10px 10px,
+    rgb(0, 160, 209) 11px 11px,
+    rgb(0, 162, 211) 12px 12px;
+    background-color: rgb(0, 162, 211);
+}
+#registration {
+    background-color: #2C3E50;
+    color: #FFF;
+    box-shadow: rgb(188, 190, 190) 1px 1px,
+    rgb(195, 197, 197) 2px 2px,
+    rgb(202, 204, 204) 3px 3px,
+    rgb(208, 211, 211) 4px 4px,
+    rgb(215, 217, 217) 5px 5px,
+    rgb(222, 224, 224) 6px 6px,
+    rgb(228, 231, 231) 7px 7px,
+    rgb(235, 238, 238) 8px 8px,
+    rgb(242, 245, 245) 9px 9px;
+    background-color: rgb(44, 62, 80);
+}
+.form-control {
+    box-shadow: rgb(37, 52, 67) 1px 1px,
+    rgb(37, 52, 67) 2px 2px,
+    rgb(37, 52, 67) 3px 3px,
+    rgb(37, 52, 67) 4px 4px,
+    rgb(37, 52, 68) 5px 5px,
+    rgb(37, 53, 68) 6px 6px,
+    rgb(37, 53, 68) 7px 7px,
+    rgb(38, 53, 68) 8px 8px,
+    rgb(38, 53, 69) 9px 9px,
+    rgb(38, 53, 69) 10px 10px,
+    rgb(38, 54, 69) 11px 11px,
+    rgb(38, 54, 69) 12px 12px,
+    rgb(38, 54, 70) 13px 13px,
+    rgb(38, 54, 70) 14px 14px,
+    rgb(38, 54, 70) 15px 15px,
+    rgb(39, 54, 70) 16px 16px,
+    rgb(39, 55, 71) 17px 17px,
+    rgb(39, 55, 71) 18px 18px,
+    rgb(39, 55, 71) 19px 19px,
+    rgb(39, 55, 71) 20px 20px,
+    rgb(39, 55, 71) 21px 21px,
+    rgb(39, 56, 72) 22px 22px,
+    rgb(39, 56, 72) 23px 23px,
+    rgb(40, 56, 72) 24px 24px,
+    rgb(40, 56, 72) 25px 25px,
+    rgb(40, 56, 73) 26px 26px,
+    rgb(40, 56, 73) 27px 27px,
+    rgb(40, 57, 73) 28px 28px,
+    rgb(40, 57, 73) 29px 29px,
+    rgb(40, 57, 74) 30px 30px,
+    rgb(40, 57, 74) 31px 31px,
+    rgb(41, 57, 74) 32px 32px,
+    rgb(41, 58, 74) 33px 33px,
+    rgb(41, 58, 75) 34px 34px,
+    rgb(41, 58, 75) 35px 35px,
+    rgb(41, 58, 75) 36px 36px,
+    rgb(41, 58, 75) 37px 37px,
+    rgb(41, 58, 75) 38px 38px,
+    rgb(41, 59, 76) 39px 39px,
+    rgb(42, 59, 76) 40px 40px,
+    rgb(42, 59, 76) 41px 41px,
+    rgb(42, 59, 76) 42px 42px,
+    rgb(42, 59, 77) 43px 43px,
+    rgb(42, 60, 77) 44px 44px,
+    rgb(42, 60, 77) 45px 45px,
+    rgb(42, 60, 77) 46px 46px,
+    rgb(42, 60, 78) 47px 47px,
+    rgb(43, 60, 78) 48px 48px,
+    rgb(43, 60, 78) 49px 49px,
+    rgb(43, 61, 78) 50px 50px,
+    rgb(43, 61, 79) 51px 51px,
+    rgb(43, 61, 79) 52px 52px,
+    rgb(43, 61, 79) 53px 53px,
+    rgb(43, 61, 79) 54px 54px,
+    rgb(44, 62, 80) 55px 55px;
+    background-color: rgb(22, 160, 133);
+}
+#per_title {
+    padding: 10px 10px 10px 10px;
+    background-color: #e74c3c;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Proxima Nova;
+    text-shadow: rgb(194, 64, 50) 1px 1px,
+    rgb(196, 64, 50) 2px 2px,
+    rgb(198, 65, 51) 3px 3px,
+    rgb(200, 66, 51) 4px 4px,
+    rgb(203, 67, 52) 5px 5px,
+    rgb(205, 67, 53) 6px 6px,
+    rgb(207, 68, 53) 7px 7px,
+    rgb(210, 69, 54) 8px 8px,
+    rgb(212, 70, 55) 9px 9px,
+    rgb(214, 70, 55) 10px 10px,
+    rgb(217, 71, 56) 11px 11px,
+    rgb(219, 72, 56) 12px 12px,
+    rgb(221, 73, 57) 13px 13px,
+    rgb(224, 73, 58) 14px 14px,
+    rgb(226, 74, 58) 15px 15px,
+    rgb(228, 75, 59) 16px 16px,
+    rgb(231, 76, 60) 17px 17px;
+    background-color: rgb(231, 76, 60);
+}
+#rates {
+    background-color: #34495e;
+    color: #fff;
+    box-shadow: rgb(181, 183, 183) 1px 1px,
+    rgb(184, 186, 186) 2px 2px,
+    rgb(187, 189, 189) 3px 3px,
+    rgb(189, 192, 192) 4px 4px,
+    rgb(192, 194, 194) 5px 5px,
+    rgb(195, 197, 197) 6px 6px,
+    rgb(198, 200, 200) 7px 7px,
+    rgb(200, 203, 203) 8px 8px,
+    rgb(203, 206, 206) 9px 9px,
+    rgb(206, 208, 208) 10px 10px,
+    rgb(209, 211, 211) 11px 11px,
+    rgb(211, 214, 214) 12px 12px,
+    rgb(214, 217, 217) 13px 13px,
+    rgb(217, 219, 219) 14px 14px,
+    rgb(220, 222, 222) 15px 15px,
+    rgb(222, 225, 225) 16px 16px,
+    rgb(225, 228, 228) 17px 17px,
+    rgb(228, 231, 231) 18px 18px,
+    rgb(231, 233, 233) 19px 19px,
+    rgb(233, 236, 236) 20px 20px,
+    rgb(236, 239, 239) 21px 21px,
+    rgb(239, 242, 242) 22px 22px,
+    rgb(242, 245, 245) 23px 23px;
+}
+#table {
+    height: 250px;
+    overflow-y: scroll;
+    margin-top: 50px;
+    background-color: #34495e;
+    color: #fff;
+    box-shadow: rgb(181, 183, 183) 1px 1px,
+    rgb(184, 186, 186) 2px 2px,
+    rgb(187, 189, 189) 3px 3px,
+    rgb(189, 192, 192) 4px 4px,
+    rgb(192, 194, 194) 5px 5px,
+    rgb(195, 197, 197) 6px 6px,
+    rgb(198, 200, 200) 7px 7px,
+    rgb(200, 203, 203) 8px 8px,
+    rgb(203, 206, 206) 9px 9px,
+    rgb(206, 208, 208) 10px 10px,
+    rgb(209, 211, 211) 11px 11px,
+    rgb(211, 214, 214) 12px 12px,
+    rgb(214, 217, 217) 13px 13px,
+    rgb(217, 219, 219) 14px 14px,
+    rgb(220, 222, 222) 15px 15px,
+    rgb(222, 225, 225) 16px 16px,
+    rgb(225, 228, 228) 17px 17px,
+    rgb(228, 231, 231) 18px 18px,
+    rgb(231, 233, 233) 19px 19px,
+    rgb(233, 236, 236) 20px 20px,
+    rgb(236, 239, 239) 21px 21px,
+    rgb(239, 242, 242) 22px 22px,
+    rgb(242, 245, 245) 23px 23px;
+}
+#instruc {
+    background-color: #cc6055;
+    color: #FFF;
+    box-shadow: rgb(213, 216, 216) 1px 1px,
+    rgb(214, 217, 217) 2px 2px,
+    rgb(214, 217, 217) 3px 3px,
+    rgb(215, 218, 218) 4px 4px,
+    rgb(215, 218, 218) 5px 5px,
+    rgb(216, 219, 219) 6px 6px,
+    rgb(216, 219, 219) 7px 7px,
+    rgb(217, 220, 220) 8px 8px,
+    rgb(218, 221, 221) 9px 9px,
+    rgb(218, 221, 221) 10px 10px,
+    rgb(219, 222, 222) 11px 11px,
+    rgb(219, 222, 222) 12px 12px,
+    rgb(220, 223, 223) 13px 13px,
+    rgb(220, 223, 223) 14px 14px,
+    rgb(221, 224, 224) 15px 15px,
+    rgb(221, 224, 224) 16px 16px,
+    rgb(222, 225, 225) 17px 17px,
+    rgb(223, 226, 226) 18px 18px,
+    rgb(223, 226, 226) 19px 19px,
+    rgb(224, 227, 227) 20px 20px,
+    rgb(224, 227, 227) 21px 21px,
+    rgb(225, 228, 228) 22px 22px,
+    rgb(225, 228, 228) 23px 23px,
+    rgb(226, 229, 229) 24px 24px,
+    rgb(226, 229, 229) 25px 25px,
+    rgb(227, 230, 230) 26px 26px,
+    rgb(228, 231, 231) 27px 27px,
+    rgb(228, 231, 231) 28px 28px,
+    rgb(229, 232, 232) 29px 29px,
+    rgb(229, 232, 232) 30px 30px,
+    rgb(230, 233, 233) 31px 31px,
+    rgb(230, 233, 233) 32px 32px,
+    rgb(231, 234, 234) 33px 33px,
+    rgb(231, 234, 234) 34px 34px,
+    rgb(232, 235, 235) 35px 35px,
+    rgb(233, 236, 236) 36px 36px,
+    rgb(233, 236, 236) 37px 37px,
+    rgb(234, 237, 237) 38px 38px,
+    rgb(234, 237, 237) 39px 39px,
+    rgb(235, 238, 238) 40px 40px,
+    rgb(235, 238, 238) 41px 41px,
+    rgb(236, 239, 239) 42px 42px,
+    rgb(236, 239, 239) 43px 43px,
+    rgb(237, 240, 240) 44px 44px,
+    rgb(238, 241, 241) 45px 45px,
+    rgb(238, 241, 241) 46px 46px,
+    rgb(239, 242, 242) 47px 47px,
+    rgb(239, 242, 242) 48px 48px,
+    rgb(240, 243, 243) 49px 49px,
+    rgb(240, 243, 243) 50px 50px,
+    rgb(241, 244, 244) 51px 51px,
+    rgb(242, 245, 245) 52px 52px;
+    background-color: rgb(204, 96, 85);
+}
+#instruc:after {
+    content: ' ';
+    width: 10px;
+    height: 0px;
+    border-top: 20px solid #00a2d3;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid  transparent;
+    position: absolute;
+    left: 150px;
+    top: 48px;
+}
+#head2 {
+    background-color: #cc6055;
+    color: #FFF;
+    text-shadow: rgb(183, 85, 76) 1px 1px,
+    rgb(185, 86, 77) 2px 2px,
+    rgb(187, 87, 78) 3px 3px,
+    rgb(189, 88, 79) 4px 4px,
+    rgb(191, 89, 79) 5px 5px,
+    rgb(193, 90, 80) 6px 6px,
+    rgb(194, 91, 81) 7px 7px,
+    rgb(196, 92, 82) 8px 8px,
+    rgb(198, 93, 82) 9px 9px,
+    rgb(200, 94, 83) 10px 10px,
+    rgb(202, 95, 84) 11px 11px,
+    rgb(204, 96, 85) 12px 12px;
+    background-color: rgb(204, 96, 85);
+}
+#instruc2 {
+    background-color: #00a2d3;
+    color: #FFF;
+    box-shadow: rgb(213, 216, 216) 1px 1px,
+    rgb(214, 217, 217) 2px 2px,
+    rgb(214, 217, 217) 3px 3px,
+    rgb(215, 218, 218) 4px 4px,
+    rgb(215, 218, 218) 5px 5px,
+    rgb(216, 219, 219) 6px 6px,
+    rgb(216, 219, 219) 7px 7px,
+    rgb(217, 220, 220) 8px 8px,
+    rgb(218, 221, 221) 9px 9px,
+    rgb(218, 221, 221) 10px 10px,
+    rgb(219, 222, 222) 11px 11px,
+    rgb(219, 222, 222) 12px 12px,
+    rgb(220, 223, 223) 13px 13px,
+    rgb(220, 223, 223) 14px 14px,
+    rgb(221, 224, 224) 15px 15px,
+    rgb(221, 224, 224) 16px 16px,
+    rgb(222, 225, 225) 17px 17px,
+    rgb(223, 226, 226) 18px 18px,
+    rgb(223, 226, 226) 19px 19px,
+    rgb(224, 227, 227) 20px 20px,
+    rgb(224, 227, 227) 21px 21px,
+    rgb(225, 228, 228) 22px 22px,
+    rgb(225, 228, 228) 23px 23px,
+    rgb(226, 229, 229) 24px 24px,
+    rgb(226, 229, 229) 25px 25px,
+    rgb(227, 230, 230) 26px 26px,
+    rgb(228, 231, 231) 27px 27px,
+    rgb(228, 231, 231) 28px 28px,
+    rgb(229, 232, 232) 29px 29px,
+    rgb(229, 232, 232) 30px 30px,
+    rgb(230, 233, 233) 31px 31px,
+    rgb(230, 233, 233) 32px 32px,
+    rgb(231, 234, 234) 33px 33px,
+    rgb(231, 234, 234) 34px 34px,
+    rgb(232, 235, 235) 35px 35px,
+    rgb(233, 236, 236) 36px 36px,
+    rgb(233, 236, 236) 37px 37px,
+    rgb(234, 237, 237) 38px 38px,
+    rgb(234, 237, 237) 39px 39px,
+    rgb(235, 238, 238) 40px 40px,
+    rgb(235, 238, 238) 41px 41px,
+    rgb(236, 239, 239) 42px 42px,
+    rgb(236, 239, 239) 43px 43px,
+    rgb(237, 240, 240) 44px 44px,
+    rgb(238, 241, 241) 45px 45px,
+    rgb(238, 241, 241) 46px 46px,
+    rgb(239, 242, 242) 47px 47px,
+    rgb(239, 242, 242) 48px 48px,
+    rgb(240, 243, 243) 49px 49px,
+    rgb(240, 243, 243) 50px 50px,
+    rgb(241, 244, 244) 51px 51px,
+    rgb(242, 245, 245) 52px 52px;
+    background-color: rgb(0, 162, 211);
+}
+#instruc2:after {
+    content: ' ';
+    width: 10px;
+    height: 0px;
+    border-top: 20px solid #cc6055;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-right: 20px solid  transparent;
+    position: absolute;
+    left: 150px;
+    top: 48px;
+}
+#details {
+    background-color: #34495e;
+    //border: 1px solid #bdc3c7;
+    box-shadow: 10px 15px 20px 0px #737373;
+    color: white;
+    box-shadow: rgb(207, 210, 210) 1px 1px,
+    rgb(211, 214, 214) 2px 2px,
+    rgb(216, 219, 219) 3px 3px,
+    rgb(220, 223, 223) 4px 4px,
+    rgb(224, 227, 227) 5px 5px,
+    rgb(229, 232, 232) 6px 6px,
+    rgb(233, 236, 236) 7px 7px,
+    rgb(237, 240, 240) 8px 8px,
+    rgb(242, 245, 245) 9px 9px;
+    background-color: rgb(52, 73, 94);
+}
+.labels {
+    font-family: Proxima Nova;
+    font-weight: 500;
+}
+#readmore {
+    color: #fff;
+    border-radius: 3px;
+    background-color: #47c9af;
+    box-shadow: 0.5px 3px 0px #669999;
+    margin-left: -23px;
+    margin-top: 18px;
+    padding-top: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: Proxima Nova;
+}
+#readmore:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #cccccc;
+    -webkit-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+#readmore2 {
+    border-radius: 3px;
+    padding-top: 8px;
+    color: #fff;
+    background-color: #47c9af;
+    box-shadow: 0.5px 3px 0px #669999;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: Proxima Nova;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+#readmore2:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #cccccc;
+    -webkit-transition: background 0.5s linear 0s, color 0.5s linear 0s;
+}
+#checkdate {
+    margin-top: -30px;
+    padding-bottom: 15px;
+}
+#login {
+    height: 50px;
+    background-color: #00707F;
+    border-bottom: 4px solid #F44647;
+    padding-top: 6px;
+}
+#datepicker {
+    background: url('../image/date.png')#fff no-repeat right center;
+    background-repeat: no-repeat;
+    font-family: century Gothic,sans-serif;
+}
+#datepicker2 {
+    background: url('../image/date.png')#fff no-repeat right center;
+    background-repeat: no-repeat;
+    font-family: century Gothic,sans-serif;
+}
+#check {
+    border-radius: 0px;
+    color: white;
+    background-color: #03A678;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 13px;
+    padding-left: 8px;
+    font-family: century Gothic,sans-serif;
+}
+.form-control{
+    font-family: century Gothic,sans-serif;
+}
+.caption {
+    float: left;
+}
+.arrival {
+    float: left;
+}
+.departure {
+    float: right;
+}
+.errors2 {
+    color: #ed797e;
+    font-weight: 700;
+}
+#errors2 {
+    color: #ed797e;
+    font-weight: 700;
+}
+#already {
+    padding-left: 100px;
+}
+.modal-title {
+    font-family: Proxima Nova;
+}
+#warning {
+    color: #ba0d0d;
+    font-weight: 700;
+    font-family: Proxima Nova;
+}
+.rules {
+    margin-left: 50px;
+    font-size: 15px;
+}
+#reservation {
+    background-color: #1F2E3B;
+    box-shadow: 8px 8px 3px #7f8c8d;
+    color: aliceBlue;
+}
+.reservation {
+    margin-left: 50px;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-family: Proxima Nova;
+}
+.title2 {
+    font-family: Proxima Nova;
+    font-weight: 700;
+}
+.reser {
+    background-color: #008783;
+    color: #FFF;
+    box-shadow: rgb(215, 218, 218) 1px 1px,
+    rgb(216, 219, 219) 2px 2px,
+    rgb(216, 219, 219) 3px 3px,
+    rgb(217, 220, 220) 4px 4px,
+    rgb(217, 220, 220) 5px 5px,
+    rgb(218, 221, 221) 6px 6px,
+    rgb(218, 221, 221) 7px 7px,
+    rgb(219, 222, 222) 8px 8px,
+    rgb(219, 222, 222) 9px 9px,
+    rgb(220, 223, 223) 10px 10px,
+    rgb(220, 223, 223) 11px 11px,
+    rgb(221, 224, 224) 12px 12px,
+    rgb(221, 224, 224) 13px 13px,
+    rgb(222, 225, 225) 14px 14px,
+    rgb(222, 225, 225) 15px 15px,
+    rgb(223, 226, 226) 16px 16px,
+    rgb(223, 226, 226) 17px 17px,
+    rgb(224, 227, 227) 18px 18px,
+    rgb(224, 227, 227) 19px 19px,
+    rgb(225, 228, 228) 20px 20px,
+    rgb(225, 228, 228) 21px 21px,
+    rgb(226, 229, 229) 22px 22px,
+    rgb(226, 229, 229) 23px 23px,
+    rgb(227, 230, 230) 24px 24px,
+    rgb(227, 230, 230) 25px 25px,
+    rgb(228, 231, 231) 26px 26px,
+    rgb(229, 232, 232) 27px 27px,
+    rgb(229, 232, 232) 28px 28px,
+    rgb(230, 233, 233) 29px 29px,
+    rgb(230, 233, 233) 30px 30px,
+    rgb(231, 234, 234) 31px 31px,
+    rgb(231, 234, 234) 32px 32px,
+    rgb(232, 235, 235) 33px 33px,
+    rgb(232, 235, 235) 34px 34px,
+    rgb(233, 236, 236) 35px 35px,
+    rgb(233, 236, 236) 36px 36px,
+    rgb(234, 237, 237) 37px 37px,
+    rgb(234, 237, 237) 38px 38px,
+    rgb(235, 238, 238) 39px 39px,
+    rgb(235, 238, 238) 40px 40px,
+    rgb(236, 239, 239) 41px 41px,
+    rgb(236, 239, 239) 42px 42px,
+    rgb(237, 240, 240) 43px 43px,
+    rgb(237, 240, 240) 44px 44px,
+    rgb(238, 241, 241) 45px 45px,
+    rgb(238, 241, 241) 46px 46px,
+    rgb(239, 242, 242) 47px 47px,
+    rgb(239, 242, 242) 48px 48px,
+    rgb(240, 243, 243) 49px 49px,
+    rgb(240, 243, 243) 50px 50px,
+    rgb(241, 244, 244) 51px 51px,
+    rgb(242, 245, 245) 52px 52px;
+   background-color: rgb(0, 135, 131);
+}
+#reser_title {
+    font-family: Proxima Nova;
+
+}
+#reser_title2 {
+    background-color: #4b4b4b;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    text-shadow: rgb(45, 45, 45) 1px 1px,
+    rgb(49, 49, 49) 2px 2px,
+    rgb(53, 53, 53) 3px 3px,
+    rgb(56, 56, 56) 4px 4px,
+    rgb(60, 60, 60) 5px 5px,
+    rgb(64, 64, 64) 6px 6px,
+    rgb(67, 67, 67) 7px 7px,
+    rgb(71, 71, 71) 8px 8px,
+    rgb(75, 75, 75) 9px 9px;
+   background-color: rgb(75, 75, 75);
+}
+#time {
+    box-shadow: rgb(0, 122, 118) 1px 1px,
+    rgb(0, 122, 118) 2px 2px,
+    rgb(0, 123, 119) 3px 3px,
+    rgb(0, 123, 119) 4px 4px,
+    rgb(0, 124, 120) 5px 5px,
+    rgb(0, 124, 120) 6px 6px,
+    rgb(0, 125, 121) 7px 7px,
+    rgb(0, 125, 121) 8px 8px,
+    rgb(0, 126, 122) 9px 9px,
+    rgb(0, 126, 122) 10px 10px,
+    rgb(0, 127, 123) 11px 11px,
+    rgb(0, 127, 123) 12px 12px,
+    rgb(0, 128, 124) 13px 13px,
+    rgb(0, 128, 124) 14px 14px,
+    rgb(0, 128, 124) 15px 15px,
+    rgb(0, 129, 125) 16px 16px,
+    rgb(0, 129, 125) 17px 17px,
+    rgb(0, 130, 126) 18px 18px,
+    rgb(0, 130, 126) 19px 19px,
+    rgb(0, 131, 127) 20px 20px,
+    rgb(0, 131, 127) 21px 21px,
+    rgb(0, 132, 128) 22px 22px,
+    rgb(0, 132, 128) 23px 23px,
+    rgb(0, 133, 129) 24px 24px,
+    rgb(0, 133, 129) 25px 25px,
+    rgb(0, 134, 130) 26px 26px,
+    rgb(0, 134, 130) 27px 27px,
+    rgb(0, 135, 131) 28px 28px;
+   background-color: rgb(255, 255, 255);
+}
+#adate {
+    box-shadow: rgb(0, 122, 118) 1px 1px,
+    rgb(0, 122, 118) 2px 2px,
+    rgb(0, 123, 119) 3px 3px,
+    rgb(0, 123, 119) 4px 4px,
+    rgb(0, 124, 120) 5px 5px,
+    rgb(0, 124, 120) 6px 6px,
+    rgb(0, 125, 121) 7px 7px,
+    rgb(0, 125, 121) 8px 8px,
+    rgb(0, 126, 122) 9px 9px,
+    rgb(0, 126, 122) 10px 10px,
+    rgb(0, 127, 123) 11px 11px,
+    rgb(0, 127, 123) 12px 12px,
+    rgb(0, 128, 124) 13px 13px,
+    rgb(0, 128, 124) 14px 14px,
+    rgb(0, 128, 124) 15px 15px,
+    rgb(0, 129, 125) 16px 16px,
+    rgb(0, 129, 125) 17px 17px,
+    rgb(0, 130, 126) 18px 18px,
+    rgb(0, 130, 126) 19px 19px,
+    rgb(0, 131, 127) 20px 20px,
+    rgb(0, 131, 127) 21px 21px,
+    rgb(0, 132, 128) 22px 22px,
+    rgb(0, 132, 128) 23px 23px,
+    rgb(0, 133, 129) 24px 24px,
+    rgb(0, 133, 129) 25px 25px,
+    rgb(0, 134, 130) 26px 26px,
+    rgb(0, 134, 130) 27px 27px,
+    rgb(0, 135, 131) 28px 28px;
+   background-color: rgb(255, 255, 255);
+}
+#ddate {
+    box-shadow: rgb(0, 122, 118) 1px 1px,
+    rgb(0, 122, 118) 2px 2px,
+    rgb(0, 123, 119) 3px 3px,
+    rgb(0, 123, 119) 4px 4px,
+    rgb(0, 124, 120) 5px 5px,
+    rgb(0, 124, 120) 6px 6px,
+    rgb(0, 125, 121) 7px 7px,
+    rgb(0, 125, 121) 8px 8px,
+    rgb(0, 126, 122) 9px 9px,
+    rgb(0, 126, 122) 10px 10px,
+    rgb(0, 127, 123) 11px 11px,
+    rgb(0, 127, 123) 12px 12px,
+    rgb(0, 128, 124) 13px 13px,
+    rgb(0, 128, 124) 14px 14px,
+    rgb(0, 128, 124) 15px 15px,
+    rgb(0, 129, 125) 16px 16px,
+    rgb(0, 129, 125) 17px 17px,
+    rgb(0, 130, 126) 18px 18px,
+    rgb(0, 130, 126) 19px 19px,
+    rgb(0, 131, 127) 20px 20px,
+    rgb(0, 131, 127) 21px 21px,
+    rgb(0, 132, 128) 22px 22px,
+    rgb(0, 132, 128) 23px 23px,
+    rgb(0, 133, 129) 24px 24px,
+    rgb(0, 133, 129) 25px 25px,
+    rgb(0, 134, 130) 26px 26px,
+    rgb(0, 134, 130) 27px 27px,
+    rgb(0, 135, 131) 28px 28px;
+   background-color: rgb(255, 255, 255);
+}
+#atime {
+    box-shadow: rgb(0, 122, 118) 1px 1px,
+    rgb(0, 122, 118) 2px 2px,
+    rgb(0, 123, 119) 3px 3px,
+    rgb(0, 123, 119) 4px 4px,
+    rgb(0, 124, 120) 5px 5px,
+    rgb(0, 124, 120) 6px 6px,
+    rgb(0, 125, 121) 7px 7px,
+    rgb(0, 125, 121) 8px 8px,
+    rgb(0, 126, 122) 9px 9px,
+    rgb(0, 126, 122) 10px 10px,
+    rgb(0, 127, 123) 11px 11px,
+    rgb(0, 127, 123) 12px 12px,
+    rgb(0, 128, 124) 13px 13px,
+    rgb(0, 128, 124) 14px 14px,
+    rgb(0, 128, 124) 15px 15px,
+    rgb(0, 129, 125) 16px 16px,
+    rgb(0, 129, 125) 17px 17px,
+    rgb(0, 130, 126) 18px 18px,
+    rgb(0, 130, 126) 19px 19px,
+    rgb(0, 131, 127) 20px 20px,
+    rgb(0, 131, 127) 21px 21px,
+    rgb(0, 132, 128) 22px 22px,
+    rgb(0, 132, 128) 23px 23px,
+    rgb(0, 133, 129) 24px 24px,
+    rgb(0, 133, 129) 25px 25px,
+    rgb(0, 134, 130) 26px 26px,
+    rgb(0, 134, 130) 27px 27px,
+    rgb(0, 135, 131) 28px 28px;
+   background-color: rgb(255, 255, 255);
+}
+#dtime {
+    box-shadow: rgb(0, 122, 118) 1px 1px,
+    rgb(0, 122, 118) 2px 2px,
+    rgb(0, 123, 119) 3px 3px,
+    rgb(0, 123, 119) 4px 4px,
+    rgb(0, 124, 120) 5px 5px,
+    rgb(0, 124, 120) 6px 6px,
+    rgb(0, 125, 121) 7px 7px,
+    rgb(0, 125, 121) 8px 8px,
+    rgb(0, 126, 122) 9px 9px,
+    rgb(0, 126, 122) 10px 10px,
+    rgb(0, 127, 123) 11px 11px,
+    rgb(0, 127, 123) 12px 12px,
+    rgb(0, 128, 124) 13px 13px,
+    rgb(0, 128, 124) 14px 14px,
+    rgb(0, 128, 124) 15px 15px,
+    rgb(0, 129, 125) 16px 16px,
+    rgb(0, 129, 125) 17px 17px,
+    rgb(0, 130, 126) 18px 18px,
+    rgb(0, 130, 126) 19px 19px,
+    rgb(0, 131, 127) 20px 20px,
+    rgb(0, 131, 127) 21px 21px,
+    rgb(0, 132, 128) 22px 22px,
+    rgb(0, 132, 128) 23px 23px,
+    rgb(0, 133, 129) 24px 24px,
+    rgb(0, 133, 129) 25px 25px,
+    rgb(0, 134, 130) 26px 26px,
+    rgb(0, 134, 130) 27px 27px,
+    rgb(0, 135, 131) 28px 28px;
+   background-color: rgb(255, 255, 255);
+}
+#person {
+    box-shadow: rgb(0, 122, 118) 1px 1px,
+    rgb(0, 122, 118) 2px 2px,
+    rgb(0, 123, 119) 3px 3px,
+    rgb(0, 123, 119) 4px 4px,
+    rgb(0, 124, 120) 5px 5px,
+    rgb(0, 124, 120) 6px 6px,
+    rgb(0, 125, 121) 7px 7px,
+    rgb(0, 125, 121) 8px 8px,
+    rgb(0, 126, 122) 9px 9px,
+    rgb(0, 126, 122) 10px 10px,
+    rgb(0, 127, 123) 11px 11px,
+    rgb(0, 127, 123) 12px 12px,
+    rgb(0, 128, 124) 13px 13px,
+    rgb(0, 128, 124) 14px 14px,
+    rgb(0, 128, 124) 15px 15px,
+    rgb(0, 129, 125) 16px 16px,
+    rgb(0, 129, 125) 17px 17px,
+    rgb(0, 130, 126) 18px 18px,
+    rgb(0, 130, 126) 19px 19px,
+    rgb(0, 131, 127) 20px 20px,
+    rgb(0, 131, 127) 21px 21px,
+    rgb(0, 132, 128) 22px 22px,
+    rgb(0, 132, 128) 23px 23px,
+    rgb(0, 133, 129) 24px 24px,
+    rgb(0, 133, 129) 25px 25px,
+    rgb(0, 134, 130) 26px 26px,
+    rgb(0, 134, 130) 27px 27px,
+    rgb(0, 135, 131) 28px 28px;
+   background-color: rgb(255, 255, 255);
+}
+#price {
+    box-shadow: rgb(0, 122, 118) 1px 1px,
+    rgb(0, 122, 118) 2px 2px,
+    rgb(0, 123, 119) 3px 3px,
+    rgb(0, 123, 119) 4px 4px,
+    rgb(0, 124, 120) 5px 5px,
+    rgb(0, 124, 120) 6px 6px,
+    rgb(0, 125, 121) 7px 7px,
+    rgb(0, 125, 121) 8px 8px,
+    rgb(0, 126, 122) 9px 9px,
+    rgb(0, 126, 122) 10px 10px,
+    rgb(0, 127, 123) 11px 11px,
+    rgb(0, 127, 123) 12px 12px,
+    rgb(0, 128, 124) 13px 13px,
+    rgb(0, 128, 124) 14px 14px,
+    rgb(0, 128, 124) 15px 15px,
+    rgb(0, 129, 125) 16px 16px,
+    rgb(0, 129, 125) 17px 17px,
+    rgb(0, 130, 126) 18px 18px,
+    rgb(0, 130, 126) 19px 19px,
+    rgb(0, 131, 127) 20px 20px,
+    rgb(0, 131, 127) 21px 21px,
+    rgb(0, 132, 128) 22px 22px,
+    rgb(0, 132, 128) 23px 23px,
+    rgb(0, 133, 129) 24px 24px,
+    rgb(0, 133, 129) 25px 25px,
+    rgb(0, 134, 130) 26px 26px,
+    rgb(0, 134, 130) 27px 27px,
+    rgb(0, 135, 131) 28px 28px;
+   background-color: rgb(255, 255, 255);
+}
+.title1 {
+    font-family: Proxima Nova;
+    font-weight: 700;
+    height: 50px;
+    width: 380px;
+    margin-top: 0px;
+    margin-left: -30px;
+    padding-top: 13px;
+    background-color: #FF6E6E;
+}
+.titles {
+    font-family: Proxima Nova;
+    color:  #FFF;
+    font-weight: 700;
+}
+label {
+    font-family: Proxima Nova;
+    font-weight: 600;
+}

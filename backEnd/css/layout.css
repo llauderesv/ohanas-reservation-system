@@ -1,0 +1,112 @@
+body {
+	font-family: century gothic,sans serif;
+}
+#error {
+	position: absolute;
+	margin-left: 10px;
+	top: 70px;
+	color: rgb(182,0,97);
+}
+#error2 {
+	margin-left: 10px;
+	font-size: 25px;
+	top: 70px;
+	color: rgb(182,0,97);
+}
+li {
+	list-style-type: none;
+}
+#register {
+	font-size: 24px;
+	font-weight: bold;
+	color: rgb(0,164,156);
+}
+.total {
+	color: rgb(182,0,97);
+	font-weight: bold;
+}
+#header3 {
+	color: rgb(0,164,156);
+	font-weight: bold;
+}
+#btnSign {
+	background-color: rgb(0,164,156);
+	color: rgb(255,255,255);
+	font-size: 15px;
+}
+#btnSearch {
+	background-color: rgb(0,164,156);
+	color: rgb(255,255,255);
+	padding: 0px;
+	height: 21px;
+}
+#delete {
+	background-color: rgb(0,164,156);
+	color: rgb(255,255,255);
+}
+#span {
+	background-color: rgb(0,164,156);
+}
+#nav > li > a{
+	color: rgb(255,255,255);
+}
+#nav > li > a:hover{
+	color: rgb(117,117,117);
+	background-color: white;
+}
+#navbrand {
+	color: rgb(255,255,255);
+}
+.scrollbar {
+	overflow-x: scroll;
+
+}
+#female {
+	height: 20px;
+}
+#form {
+	position: absolute;
+	left: 500px;
+}
+#hide {
+	visibility: hidden;
+}
+#title {
+	background-color: rgb(0,164,156);
+	color: rgb(255,255,255);
+}
+.choice {
+	font-size: 20px;
+	font-weight: 500;
+	padding-right: 10px;
+}
+#file {
+	height: 100px;
+}
+.error {
+	position: absolute;
+	color: rgb(182,0,97);
+}
+img {
+	-webkit-user-drag: none;
+}
+#showBtn {
+	background-color: rgb(150,150,150);
+	color: white;
+	padding: 5px 10px 5px 10px;
+	
+}
+.success {
+	font-weight: bold;
+	color: #34495e;
+}
+#lock {
+	position: relative;
+	top: -50px;
+}
+#inputUser {
+	background: url('../icon/as.png') no-repeat right;
+}
+#inputPass {
+	background: url('../icon/locks.png') no-repeat right;
+}

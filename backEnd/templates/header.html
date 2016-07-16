@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title><?php print $page_title; ?></title>
+		<link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+		<link href="../css/style.css" type="text/css" rel="stylesheet">
+		<link href="../css/font-awesome.min.css" type="text/css" rel="stylesheet">
+		<link rel='shortcut icon' type='image/x-icon' href='../icon/resort.ico' />
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-static-top" id="navbar">
+			<div class="container">
+				<div class="navbar-header">
+					<?php 
+						if(isset($_SESSION['user_id'])) {
+							print '<a class="navbar-brand" href="dashboard.php" id="navbrand"><i class="fa fa-tachometer" id="fa"></i>&nbspDASHBOARD</a>';
+						}
+					?>
+					
+					<button class="navbar-toggle" data-toggle= "collapse" data-target=".navHeaderCollapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+					<ul class="nav navbar-nav navbar-right" id="nav">
+						<li class="ul">
+							<?php 
+								if(isset($_SESSION['user_id'])) {
+									if($_SESSION['user_type'] == "Administrator") {
+										print '<li class="ul"><a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home" id="fa"></i>&nbspHome <span class="caret"></span></a>
+        										<ul class="dropdown-menu">
+										            <li><a href="admin_users.php">Registered Users</a></li>
+										            <li><a href="registered_customers.php">Registered Customers</a></li>
+										            <li><a href="history.php">Reservation History</a></li>
+										            <li><a href="reports.php">Reservation Reports</a></li>
+										            <li><a href="audit_trail.php">Audit Trail</a></li>
+										            <li role="separator" class="divider"></li>
+										            <li><a href="facilities.php">Package Facilities</a></li>
+										            <li><a href="paid_rooms.php">Paid Rooms</a></li>
+												</li>
+												</ul>';
+									print '<li class="ul"><a href="add_user.php"><i class="fa fa-plus-circle" id="fa"></i>&nbspAdd User</a></li>';
+									print '<li class="ul"><a href="add_facilities.php"><i class="fa fa-university" id="fa"></i>&nbspAdd Facilities</a></li>';
+									print '<li class="ul"><a href="add_rooms.php"><i class="fa fa-bed" id="fa"></i>&nbspAdd Rooms</a></li>';
+									print '<li class="ul"><a href="reservation.php"><i class="fa fa-calendar" id="fa"></i>&nbspReservation</a>';
+									print '<li class="ul"><a href="logout.php"><i class="fa fa-sign-out" id="fa"></i>&nbspLogout</a></li>';
+								} else {
+									print '<li class="ul"><a data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home" id="fa"></i>&nbspHome <span class="caret"></span></a>
+        										<ul class="dropdown-menu">
+										            <li><a href="registered_customers.php">Registered Customers</a></li>
+										            <li><a href="history.php">Reservation History</a></li>
+										            <li><a href="reports.php">Reservation Reports</a></li>
+										            <li role="separator" class="divider"></li>
+										            <li><a href="facilities.php">Package Facilities</a></li>
+										            <li><a href="paid_rooms.php">Paid Rooms</a></li>
+												</li>
+												</ul>';
+									print '<li class="ul"><a href="reservation.php"><i class="fa fa-calendar" id="fa"></i>&nbspReservation</a>';
+									print '<li class="ul"><a href="logout.php"><i class="fa fa-sign-out" id="fa"></i>&nbspLogout</a></li>';
+								}
+								} else {
+									print '<li class="ul"><a data-toggle="modal" data-target="#modal_login">Login</a></li>';
+								}
+							?>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>

@@ -1,0 +1,123 @@
+SELECT * FROM customer_info_table;
+SELECT * FROM customer_account_table;
+SELECT * FROM pending_customer_info_table;
+SELECT * FROM pending_customer_reserve_table;
+SELECT * FROM pending_customer_room_paid_table;
+
+SELECT 
+DATE_FORMAT(arrival_date,'%b.%e,%Y') AS Arrival_Date, 
+DATE_FORMAT(arrival_time,'%l:%i:%p') AS Arrival_Time,
+DATE_FORMAT(departure_date,'%b.%e,%Y') AS Departure_Date,  
+DATE_FORMAT(departure_time,'%l:%i:%p') AS Departure_Time
+FROM pending_customer_reserve_table;
+
+CREATE VIEW account AS
+SELECT a.account_id, b.last_name, b.first_name, b.middle_name,
+b.cellphone_no,b.address,b.email_address
+FROM customer_account_table AS a INNER JOIN customer_info_table AS b 
+ON a.customer_id = b.customer_id;
+
+
+
+SELECT reservation_id 
+FROM pending_customer_reserve_table 
+WHERE arrival_date = '2015/09/09' AND 
+departure_date = '2015/09/09';
+
+SELECT reservation_id 
+FROM pending_customer_reserve_table 
+WHERE arrival_date >= '2015/09/13' AND
+departure_date <= '2015/09/15';
+
+
+SELECT reservation_id 
+FROM pending_customer_reserve_table 
+WHERE arrival_date AND departure_date IN(SELECT reservation_id 
+FROM pending_customer_reserve_table 
+WHERE arrival_date >= '2015/09/13' AND
+departure_date <= '2015/09/15'
+);
+
+
+
+
+
+SELECT DATE_FORMAT(arrival_time,'%l:%i:%p'),DATE_FORMAT(departure_time,'%l:%i:%p') FROM pending_customer_reserve_table;
+TRUNCATE customer_info_table;
+TRUNCATE customer_account_table;
+TRUNCATE pending_customer_info_table;
+TRUNCATE pending_customer_reserve_table;
+TRUNCATE pending_customer_room_paid_table;
+
+
+DELETE FROM customer_info_table WHERE customer_id >= 2015001;
+DELETE FROM pending_customer_room_paid_table WHERE room_id > 40002;
+
+
+
+SELECT a.customer_id, b.c
+
+DROP TABLE pending_customer_reserve_table;
+DROP TABLE pending_customer_room_paid_table;
+
+
+DROP TABLE pending_customer_info_table;
+
+DROP TABLE pending_customer_info_table;
+
+
+SELECT * FROM pending_customer_reserve_table;
+SELECT * FROM pending_customer_room_paid_table;
+DELETE FROM customer_info_table WHERE customer_id >= 2015001;
+
+SELECT reservation_id FROM customer_reserve_table WHERE customer_id = 2015001;
+
+
+SELECT (SELECT reservation_id 
+FROM customer_reservation_table 
+WHERE arrival_date = '2015-09-23' AND 
+departure_date = '2015-09-23' LIMIT 1) AS reservation_id
+FROM customer_reservation_table WHERE status = 'Approved';
+
+SELECT reservation_id 
+FROM customer_reservation_table 
+WHERE arrival_date = '2015-09-23' AND 
+departure_date = '2015-09-23' LIMIT 1 
+
+SELECT * FROM customer_reservation_table WHERE status = 'Approved';
+
+
+
+
+
+
+SELECT reservation_id FROM customer_reservation_table WHERE reference_no != '';
+
+
+					SELECT (SELECT reservation_id 
+					FROM customer_reservation_table 
+					WHERE arrival_date = '2015-09-22' AND 
+					departure_date = '2015-09-22') AS reservation_id
+					FROM customer_reservation_table WHERE status = 'approved';
+
+
+
+
+
+
+
+
+
+DELETE FROM customer_reservation_table WHERE reservation_id = 30001 LIMIT 1;
+
+
+SELECT a.last_name, a.first_name, a.middle_name, b.reservation_id,
+b.arrival_date, b.departure_date, b.arrival_time, b.departure_time,
+b.no_of_persons, b.days_of_rent, b.total_payment, b.status,
+b.reference_no, b.down_payment FROM
+customer_info_table AS a 
+INNER JOIN customer_reservation_table AS b
+ON a.customer_id = b.customer_id;
+
+
+
