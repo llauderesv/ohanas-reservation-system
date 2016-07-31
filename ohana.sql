@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50621
 File Encoding         : 65001
 
-Date: 2016-07-31 14:07:34
+Date: 2016-07-31 14:29:57
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,7 +27,7 @@ CREATE TABLE `audit_trail` (
   `action_date` datetime NOT NULL,
   `type` varchar(20) NOT NULL,
   PRIMARY KEY (`audit_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=50053 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=50054 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of audit_trail
@@ -84,6 +84,7 @@ INSERT INTO `audit_trail` VALUES ('50049', 'Llauderes', 'Vincent', 'Edit reserva
 INSERT INTO `audit_trail` VALUES ('50050', 'Diana', 'Cess', 'RESERVE', '2016-01-02 09:48:08', 'Customer');
 INSERT INTO `audit_trail` VALUES ('50051', 'Llauderes', 'Vincent', 'confirm reservation', '2016-01-02 09:52:24', 'Administrator');
 INSERT INTO `audit_trail` VALUES ('50052', 'Llauderes', 'Vincent', 'Cancel reservation', '2016-02-14 06:33:51', 'Customer');
+INSERT INTO `audit_trail` VALUES ('50053', 'Llauderes', 'Vincent', 'add user', '2016-07-31 14:29:08', 'Administrator');
 
 -- ----------------------------
 -- Table structure for customer_account_table
@@ -276,14 +277,14 @@ CREATE TABLE `user_account_table` (
   KEY `index_account_id` (`account_id`),
   KEY `index_user_id` (`user_id`),
   CONSTRAINT `user_account_table_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user_info_table` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1004 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1005 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of user_account_table
 -- ----------------------------
-INSERT INTO `user_account_table` VALUES ('1001', '2015001', 'llauderesv', 'ž×£gYg’\"µ“yvÙŒÿ', 'Administrator');
 INSERT INTO `user_account_table` VALUES ('1002', '2015002', 'vianca08', 'ž×£gYg’\"µ“yvÙŒÿ', 'Book Manager');
 INSERT INTO `user_account_table` VALUES ('1003', '2015003', 'lansi', 'ž×£gYg’\"µ“yvÙŒÿ', 'Book Manager');
+INSERT INTO `user_account_table` VALUES ('1004', '2015004', 'llauderesv321', 'ž×£gYg’\"µ“yvÙŒÿ', 'Administrator');
 
 -- ----------------------------
 -- Table structure for user_info_table
@@ -301,7 +302,7 @@ CREATE TABLE `user_info_table` (
   PRIMARY KEY (`user_id`),
   KEY `index_user_id` (`user_id`),
   KEY `index_full_name` (`last_name`,`first_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=2015004 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2015005 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of user_info_table
@@ -309,6 +310,7 @@ CREATE TABLE `user_info_table` (
 INSERT INTO `user_info_table` VALUES ('2015001', 'Llauderes', 'Vincent', 'Calma', 'Male', '639294335205', 'Caloocan City', 'vllauderes@yahoo.com');
 INSERT INTO `user_info_table` VALUES ('2015002', 'Llauderes', 'Vianca', 'Calma', 'Female', '639294335205', '166 General malvar Bagong Barrio Caloocan City', 'vianca@yahoo.com');
 INSERT INTO `user_info_table` VALUES ('2015003', 'Delacruz', 'Lance', 'Talosig', 'Male', '639294335205', '166 General Caloocan City', 'lance@yahoo.com');
+INSERT INTO `user_info_table` VALUES ('2015004', 'Llauderes', 'Vincent', 'Calma', 'Male', '9294335205', '166 General malvar Bagong Barrio Caloocan City', 'llauderesv@gmail.com');
 
 -- ----------------------------
 -- View structure for customer
